@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Preguntas y Respuestas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div id="game-container">
         <h1>Juego de Preguntas y Respuestas</h1>
-        <div id="quiz-container">
-            <div id="question">Pregunta aquí</div>
-            <div id="choices">
-                <button class="choice" data-number="1">Opción 1</button>
-                <button class="choice" data-number="2">Opción 2</button>
-                <button class="choice" data-number="3">Opción 3</button>
-                <button class="choice" data-number="4">Opción 4</button>
+        <div id="question-container" class="hide">
+            <p id="question">Pregunta aquí</p>
+            <div id="answer-buttons" class="btn-grid">
+                <!-- Botones de respuestas se agregarán aquí -->
             </div>
-            <button id="next">Siguiente Pregunta</button>
         </div>
-        <div id="score-container" style="display:none;">
-            <h2>¡Juego Terminado!</h2>
-            <p id="score"></p>
-            <button id="restart">Reiniciar Juego</button>
+        <div id="result-container" class="hide">
+            <p id="result-message"></p>
         </div>
+        <button id="next-button" class="hide">Siguiente</button>
+        <button id="start-button">Comenzar</button>
     </div>
     <script src="script.js"></script>
 </body>
