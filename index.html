@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>Juego de Preguntas y Respuestas</h1>
-        <div id="question-container" class="hide">
-            <p id="question">Pregunta aquí</p>
-            <div id="answer-buttons" class="btn-grid">
-                <!-- Botones de respuestas se agregarán aquí -->
+    <div id="container">
+        <div id="start-screen">
+            <h1>Juego de Preguntas y Respuestas</h1>
+            <label for="username">Ingresa tu nombre:</label>
+            <input type="text" id="username">
+            <button onclick="startGame()">Iniciar Juego</button>
+        </div>
+
+        <div id="game-screen" style="display: none;">
+            <div id="question-container">
+                <p id="question"></p>
+                <div id="answer-buttons" class="btn-container"></div>
             </div>
+            <button id="next-button" onclick="nextQuestion()" style="display: none;">Siguiente</button>
         </div>
-        <div id="result-container" class="hide">
-            <p id="result-message"></p>
+
+        <div id="end-screen" style="display: none;">
+            <h2 id="result-message"></h2>
+            <button onclick="restartGame()">Reiniciar Juego</button>
         </div>
-        <button id="next-button" class="hide">Siguiente</button>
-        <button id="start-button">Comenzar</button>
+
+        <div id="score-board" style="display: none;">
+            <h2>Tabla de Mejores Puntajes</h2>
+            <ol id="high-scores-list"></ol>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
