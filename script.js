@@ -155,4 +155,5 @@ function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').innerText = currentQuestion.question;
-    let shuffledAnswers = currentQuestion
+    currentQuestion.answers.forEach(answer => {
+        const button =
